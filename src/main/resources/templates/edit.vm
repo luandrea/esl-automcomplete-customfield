@@ -4,8 +4,8 @@
 
 	<input class="text long-field" id="$customField.id" name="$customField.id" type="text" value="$textutils.htmlEncode($!value)" />
 
-	<script>
-	  $( function() {
+	<script type="text/javascript"><!--
+	  jQuery( function() {
 	    var availableTags = [
 	      "ActionScript",
 	      "AppleScript",
@@ -14,12 +14,12 @@
 	      "C",
 	      "C++"
 	    ];
-	    $( "#$customField.id" ).autocomplete({
+	    jQuery( "#$customField.id" ).autocomplete({
 	      source: availableTags
 	    });
 	  } );
-	</script>
-
+	//--></script>
+    
 </div>
 
 #controlFooter ($action $fieldLayoutItem.fieldDescription $displayParameters.noHeader)
