@@ -1,7 +1,25 @@
 #controlHeader ($action $customField.id $customField.name $fieldLayoutItem.required $displayParameters.noHeader)
 
-<input type="text"
-       name="$customField.id"
-       value="$!value" />
+<div id="${customField.id}_container">
+
+	<input class="text long-field" id="$customField.id" name="$customField.id" type="text" value="$textutils.htmlEncode($!value)" />
+
+	<script>
+	  $( function() {
+	    var availableTags = [
+	      "ActionScript",
+	      "AppleScript",
+	      "Asp",
+	      "BASIC",
+	      "C",
+	      "C++"
+	    ];
+	    $( "#$customField.id" ).autocomplete({
+	      source: availableTags
+	    });
+	  } );
+	</script>
+
+</div>
 
 #controlFooter ($action $fieldLayoutItem.fieldDescription $displayParameters.noHeader)

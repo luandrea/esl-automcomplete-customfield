@@ -18,6 +18,10 @@
         <resource type="download" name="esl-automcomplete-customfield.js" location="/js/esl-automcomplete-customfield.js"/>
         <resource type="download" name="images/" location="/images"/>
 
+         <resource type="download" name="jquery-ui-custom-autocomplete.css" location="css/jquery-ui-custom-autocomplete.css" />
+         <resource type="download" name="jquery-custom-autocomplete.js" location="js/jquery-custom-autocomplete.js" />
+         <resource type="download" name="jquery-ui-custom-autocomplete.js" location="js/jquery-ui-custom-autocomplete.js" />
+
         <context>esl-automcomplete-customfield</context>
     </web-resource>
 
