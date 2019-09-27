@@ -1,0 +1,33 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- i18n -->
+    <resource type="i18n" name="i18n" location="esl-automcomplete-customfield"/>
+    
+    <!-- web resources -->
+    <web-resource key="esl-automcomplete-customfield-resources" name="esl-automcomplete-customfield Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="esl-automcomplete-customfield.css" location="/css/esl-automcomplete-customfield.css"/>
+        <resource type="download" name="esl-automcomplete-customfield.js" location="/js/esl-automcomplete-customfield.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>esl-automcomplete-customfield</context>
+    </web-resource>
+
+	<!-- Autocomplete customfield -->
+	<customfield-type name="ESL Autocomplete Custom Field" i18n-name-key="esl-autocomplete-field.name" key="esl-autocomplete-customfield"
+		class="it.eng.jira.customfield.EslAutocompleteCustomField">
+		
+		<resource type="velocity" name="view" location="templates/plugins/fields/view/view-basictext.vm"/>
+		<resource type="velocity" name="edit" location="templates/edit.vm"/>
+		<resource type="velocity" name="xml" location="templates/plugins/fields/xml/xml-basictext.vm"/>
+	</customfield-type>
+	
+</atlassian-plugin>
